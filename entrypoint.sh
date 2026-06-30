@@ -26,6 +26,9 @@ if [ ! -d "/server/AbioticFactor/Binaries/Win64" ] || [[ $AutoUpdate == "true" ]
     +quit
 fi
 
+
+export WINEDLLOVERRIDES="version.dll=n,b"
+
 pushd /server/AbioticFactor/Binaries/Win64 > /dev/null
 wine AbioticFactorServer-Win64-Shipping.exe $SetUsePerfThreads$SetNoAsyncLoadingThread-MaxServerPlayers=$MaxServerPlayers \
     -PORT=$Port -QueryPort=$QueryPort -ServerPassword=$ServerPassword \

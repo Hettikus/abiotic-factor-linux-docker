@@ -1,6 +1,6 @@
 # Abiotic Factor Linux Docker
 For operating a dedicated server in Docker in order to use it under Linux.
-The container uses Wine to run the server under Linux. 
+The container uses Wine to run the server under Linux.
 
 ## Setup
 1. Create a new empty directory in any location with enough storage space.
@@ -29,5 +29,9 @@ In addition to the default settings, which can be set via the environment variab
 
 Possible launch parameters and further information on the dedicated servers for Abiotic Factor can be found [here](https://github.com/DFJacob/AbioticFactorDedicatedServer/wiki/Technical-%E2%80%90-Launch-Parameters).
 
+## ue4ss
+Put `version.dll` into `AbioticFactor/Binaries/Win64` dir in the `gamefiles` and install ue4ss in the same location to enable it. It will be picked up automatically
+
 ## Credits
 Thanks to @sirwillis92 for finding a solution to the startup problem with the `LogOnline: Warning: OSS: Async task 'FOnlineAsyncTaskSteamCreateServer bWasSuccessful: 0' failed in 15` message.
+Thanks to @pleut for this config which i just adapted for use with ue4ss
